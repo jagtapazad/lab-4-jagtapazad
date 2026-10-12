@@ -39,6 +39,9 @@ function toggleDarkMode() {
     // Match the icon to whichever mode we just switched into
     const isDarkMode = body.classList.contains('dark-mode');
     updateIcon(isDarkMode);
+
+    // Remember the choice so it survives a reload
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 }
 
 
@@ -57,12 +60,14 @@ function updateIcon(isDarkMode) {
 // This function runs when the page loads
 // It checks if there's a saved preference in localStorage
 function loadSavedTheme() {
-    // TODO (OPTIONAL): 
-    // 1. Get the saved theme from localStorage
-    // 2. If it exists and is 'dark', add the dark-mode class to body
-    // 3. Update the icon accordingly
-    // Your code here:
+    const savedTheme = localStorage.getItem('theme');
 
+    // Only dark needs restoring; light is already the default
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    updateIcon(body.classList.contains('dark-mode'));
 }
 
 // Call the function when the page loads (uncomment when you implement it)
