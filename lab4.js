@@ -12,14 +12,14 @@
 // ===================================
 // STEP 1: Select DOM Elements
 // ===================================
-// TODO: Select the theme toggle button (id: 'themeToggle')
-const themeToggleBtn = null;
+// Select the theme toggle button (id: 'themeToggle')
+const themeToggleBtn = document.getElementById('themeToggle');
 
-// TODO: Select the theme icon element (id: 'themeIcon')
-const themeIcon = null;
+// Select the theme icon element (id: 'themeIcon')
+const themeIcon = document.getElementById('themeIcon');
 
-// TODO: Get the <body> element
-const body = null;
+// Get the <body> element
+const body = document.body;
 
 
 // ===================================
