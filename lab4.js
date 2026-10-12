@@ -25,9 +25,8 @@ const body = document.body;
 // ===================================
 // STEP 2: Add Event Listener
 // ===================================
-// TODO: Add a 'click' event listener to the toggle button
-// The event listener should call the toggleDarkMode function
-// Your code here:
+// Run toggleDarkMode every time the button is clicked
+themeToggleBtn.addEventListener('click', toggleDarkMode);
 
 
 // ===================================
