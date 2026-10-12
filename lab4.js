@@ -33,16 +33,12 @@ themeToggleBtn.addEventListener('click', toggleDarkMode);
 // STEP 3: Toggle Dark Mode Function
 // ===================================
 function toggleDarkMode() {
-    // TODO 1: Toggle the 'dark-mode' class on the body element
-    // Your code here:
+    // Flip the theme class on <body>; the CSS variables do the rest
+    body.classList.toggle('dark-mode');
 
-    // TODO 2: Update the icon based on the current mode
-    // Your code here:
-    
-    // Optional: Save the current mode to localStorage
-    // This is optional - try it after completing the basic functionality!
-    // Your code here (optional):
-
+    // Match the icon to whichever mode we just switched into
+    const isDarkMode = body.classList.contains('dark-mode');
+    updateIcon(isDarkMode);
 }
 
 
@@ -50,11 +46,8 @@ function toggleDarkMode() {
 // STEP 4: Update Icon Function
 // ===================================
 function updateIcon(isDarkMode) {
-    // TODO: Change the icon based on the mode
-    // If dark mode: show sun icon ☀️
-    // If light mode: show moon icon 🌙
-    // Your code here:
-
+    // Dark mode offers the sun (switch to light); light mode offers the moon
+    themeIcon.textContent = isDarkMode ? '☀️' : '🌙';
 }
 
 
